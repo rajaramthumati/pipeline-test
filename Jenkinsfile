@@ -8,7 +8,7 @@ pipeline {
       steps {
         git url: 'https://github.com/rajaramthumati/ansible-pipeline.git'
         sh "ansible-playbook -vvvv test.yml --extra-vars \'{\"var1\":\"hello\"}\' "
-        echo "awesomeVersion: ${awesomeVersion}"
+        
       }
     }
   }
