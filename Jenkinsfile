@@ -7,7 +7,7 @@ pipeline {
     stage('output_version') {
       steps {
         git url: 'https://github.com/rajaramthumati/ansible-pipeline.git'
-        sh "ansible-playbook -vvvv test.yml --extra-vars '{"var1":"hello"}' "
+        sh "ansible-playbook -vvvv test.yml --extra-vars \'{\"var1\":\"hello\"}\' "
         echo "awesomeVersion: ${awesomeVersion}"
       }
     }
