@@ -7,6 +7,7 @@ pipeline {
     stage('output_version') {
       steps {
         git url: 'https://github.com/rajaramthumati/ansible-pipeline.git'
+        ansible-playbook -vvvv test.yml
         echo "awesomeVersion: ${awesomeVersion}"
       }
     }
