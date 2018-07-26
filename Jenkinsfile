@@ -6,6 +6,7 @@ pipeline {
   stages {
     stage('output_version') {
       steps {
+        git url: 'https://github.com/rajaramthumati/ansible-pipeline.git'
         echo "awesomeVersion: ${awesomeVersion}"
       }
     }
